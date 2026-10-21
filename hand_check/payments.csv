@@ -1,0 +1,4 @@
+payment_id,order_id,type,status,amount_paise
+HP1,H1,CHARGE,FAILED,33000
+HP2,H1,CHARGE,SUCCESS,33000
+HP3,H1,REFUND,SUCCESS,9000

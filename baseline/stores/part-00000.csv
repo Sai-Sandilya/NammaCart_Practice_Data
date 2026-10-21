@@ -1,0 +1,21 @@
+store_id,store_name,city,state,store_type
+S001,NammaCart Bengaluru 1,Bengaluru,Karnataka,STORE
+S002,NammaCart Chennai 2,Chennai,Tamil Nadu,STORE
+S003,NammaCart Mumbai 3,Mumbai,Maharashtra,STORE
+S004,NammaCart Delhi 4,Delhi,Delhi,STORE
+S005,NammaCart Pune 5,Pune,Maharashtra,WAREHOUSE
+S006,NammaCart Kolkata 6,Kolkata,West Bengal,STORE
+S007,NammaCart Ahmedabad 7,Ahmedabad,Gujarat,STORE
+S008,NammaCart Hyderabad 8,Hyderabad,Telangana,STORE
+S009,NammaCart Bengaluru 9,Bengaluru,Karnataka,STORE
+S010,NammaCart Chennai 10,Chennai,Tamil Nadu,WAREHOUSE
+S011,NammaCart Mumbai 11,Mumbai,Maharashtra,STORE
+S012,NammaCart Delhi 12,Delhi,Delhi,STORE
+S013,NammaCart Pune 13,Pune,Maharashtra,STORE
+S014,NammaCart Kolkata 14,Kolkata,West Bengal,STORE
+S015,NammaCart Ahmedabad 15,Ahmedabad,Gujarat,WAREHOUSE
+S016,NammaCart Hyderabad 16,Hyderabad,Telangana,STORE
+S017,NammaCart Bengaluru 17,Bengaluru,Karnataka,STORE
+S018,NammaCart Chennai 18,Chennai,Tamil Nadu,STORE
+S019,NammaCart Mumbai 19,Mumbai,Maharashtra,STORE
+S020,NammaCart Delhi 20,Delhi,Delhi,WAREHOUSE

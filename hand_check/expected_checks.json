@@ -1,0 +1,11 @@
+{
+  "eligible_orders": 1,
+  "booked_merchandise_paise": 28000,
+  "approved_refunds_paise": 9000,
+  "net_merchandise_paise": 19000,
+  "successful_charges_paise": 33000,
+  "successful_refunds_paise": 9000,
+  "net_cash_paise": 24000,
+  "shipping_fee_paise": 5000,
+  "note": "Only H1 is eligible. Fixture uses a deliberately smaller schema. These are acceptance checks, not query solutions."
+}

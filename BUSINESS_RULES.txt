@@ -1,0 +1,68 @@
+MONEY AND TIME
+All money is INR in integer paise: 100 paise equals one rupee. Store integers or exact decimals; do not use floating-point money. Store timestamps in UTC and derive Asia/Kolkata dates for business reports. Taxes, foreign exchange, advertising spend and accounting revenue-recognition rules are outside this dataset.
+
+A VALID ORDER
+An order has a valid unique key, known customer and store, valid timestamp/status, and nonnegative header amounts. Every source item for the order must be present, deduplicated, valid and linked to a known product. Sum of line net plus shipping must equal the header total exactly. An invalid item makes the order ineligible for financial marts until repaired.
+
+ELIGIBLE BOOKED ORDER
+A valid order with status PAID, SHIPPED or DELIVERED. CANCELLED and PENDING orders are retained for operational analysis but excluded from booked merchandise and eligible order counts. A product being inactive now does not invalidate historical sales.
+
+LINE GROSS AND NET
+Line gross = quantity multiplied by unit_price_paise. discount_paise is the total discount for that entire line, not a per-unit discount or a percentage. Line net = line gross minus line discount.
+
+ORDER AMOUNTS
+Booked merchandise = sum of eligible line net. Order payable = merchandise plus shipping_fee_paise, counted once per order. The source order_total_paise is the payable amount even for a pending or cancelled order; status determines reporting eligibility.
+
+RETURN RULES
+A return refers to one order item. Count only approved returns with valid positive quantities and amounts. Cumulative returned quantity must not exceed purchased quantity; cumulative refund must not exceed the original line net. Use the supplied refund amount as authoritative within these limits. Shipping is not refunded in this project.
+
+NET MERCHANDISE
+For a cohort of eligible orders, net merchandise = booked merchandise minus approved refunds on their lines available at the reporting cutoff. Attribute this metric to the original order business date. New returns can therefore restate an earlier order-date report. Call this a training booked-sales measure, not audited accounting revenue.
+
+NET CASH
+Successful CHARGE amounts minus successful REFUND amounts. FAILED attempts contribute zero. Group cash by payment business date. Keep cash on financially ineligible orders in an exception report rather than silently counting or discarding it; this synthetic main dataset has no unexplained settlement differences after validation.
+
+AVERAGE ORDER VALUE
+Booked merchandise before returns, excluding shipping, divided by the number of eligible booked orders in the chosen period. An empty denominator produces NULL or a clearly labeled no-data value, not a false zero.
+
+REPEAT CUSTOMER SHARE
+Among distinct customers with at least one eligible order in the stated observation window, the share with at least two eligible orders in that same window. State the window and cutoff; this is different from cohort retention.
+
+RETURN QUANTITY RATE
+Approved returned units associated with the selected eligible order cohort divided by purchased units in that cohort. Do not divide return records by order records and label it a unit-return rate.
+
+ON-TIME DELIVERY RATE
+Delivered eligible orders with delivered_ts less than or equal to promised_delivery_ts divided by delivered eligible orders, grouped by delivery business date when making a daily delivery report. Exclude undelivered orders from this denominator and report them separately.
+
+INVENTORY REPORTING
+Inventory covers 500 products, four stores and 30 June dates: 60,000 unique snapshots. A zero means out of stock; a missing product/store/date is not known stock. Quantities can be added across products at one time, not across dates as if they were movements.
+
+MARKETING FUNNEL
+One source session contributes at most once per step. Require view, cart, checkout and purchase in timestamp order in the same session; break ties by event ID. Attribute the session to the earliest view source. Anonymous sessions are valid. Session-level conversion does not require joining every event to a known customer.
+
+HISTORICAL CUSTOMER ATTRIBUTES
+Use the customer version valid at order_ts for historical customer-city reports. Use current attributes only for explicitly current-state reports. SCD intervals are [valid_from, valid_to); a null end denotes the open interval. Soft deletion marks current state inactive and preserves historical facts.
+
+PRESERVE EVIDENCE
+Never edit the supplied raw files to make tests pass. Preserve the original payload, source file, and ingest identity before casting or cleaning.
+
+DETERMINISTIC CLASSIFICATION
+First identify exact replays by the documented raw identity; then parse and validate; then apply parent-key and business checks. Every physical record gets one accounting bucket, although it may have several failed rules. Record a primary reason with a documented priority.
+
+OPTIONAL CUSTOMER ATTRIBUTES
+Blank city becomes UNKNOWN; state remains the supplied state unless it also fails your rule. Trim and standardize city case. An invalid email becomes null plus a quality flag. Customer ID, not name or email, identifies the customer.
+
+REQUIRED RELATIONSHIPS
+Unknown customer/store/order/product/item keys are not silently removed by inner joins. Quarantine or park them with a reason. The explicitly artificial orphan IDs C999999 and P99999 never arrive in normal batches.
+
+KNOWN DUPLICATES
+Identical payloads with the same key are replays. Different payloads with the same key are not safe to collapse arbitrarily. In the equal-sequence conflicting CDC fixture, flag the conflict and hold that entity for review.
+
+PUBLICATION GATES
+Block publication for unreadable required files, unknown breaking schemas, failed money reconciliation in eligible facts, conflicting published keys, or overlapping customer history. Known invalid source rows may be quarantined while a complete, reconciled valid subset is published with rejection counts.
+
+ELIGIBILITY VERSUS QUALITY
+A valid pending order is not a defective order. An anonymous event is not a missing customer error. A late delivery is a business performance issue. A malformed JSON line is a technical quality error.
+
+REFERENCE COUNTS
+manifest.json provides file checksums, physical counts and selected injected-condition counts. Those counts are useful checks, not a completed cleaned dataset or final business report. New defects you intentionally inject must be recorded separately.

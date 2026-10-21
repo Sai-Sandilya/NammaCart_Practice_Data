@@ -1,0 +1,119 @@
+Exact duplicates
+Where: Customers, orders, items, events, CDC
+Sprints: 5, 6, 11, 12
+Expected behavior: A replay does not change the final business answer.
+
+Missing city and invalid email
+Where: customers
+Sprints: 2, 6
+Expected behavior: Optional attribute failures do not delete usable customers.
+
+CSV quoting
+Where: customer names containing commas and quotes
+Sprints: 1, 5
+Expected behavior: The parser preserves a single field and record.
+
+Invalid timestamp / missing customer
+Where: orders
+Sprints: 4, 6
+Expected behavior: Parsing and mandatory-key problems remain traceable.
+
+Unknown customer / product
+Where: C999999, P99999
+Sprints: 3, 6
+Expected behavior: No silent inner-join loss; affected orders are ineligible.
+
+Negative item quantity
+Where: order_items
+Sprints: 6, 8
+Expected behavior: Invalid rows cannot lower reported sales accidentally.
+
+Malformed JSON
+Where: 21 web-event lines
+Sprints: 5, 7
+Expected behavior: Every received line is accounted for.
+
+Nested and empty arrays
+Where: web_events.cart
+Sprints: 7
+Expected behavior: Exploding does not change event-level metrics.
+
+Anonymous visits and abandoned carts
+Where: web_events
+Sprints: 7, 9
+Expected behavior: They remain valid sessions, with no invented customer.
+
+Payment retries and pending/cancelled orders
+Where: payments and orders
+Sprints: 3, 8
+Expected behavior: Failed charges and ineligible orders are not sales.
+
+Partial returns and refunds
+Where: returns and REFUND payments
+Sprints: 8
+Expected behavior: Units, line amounts and cash reconcile.
+
+Late and incomplete delivery
+Where: shipments
+Sprints: 8
+Expected behavior: Undelivered orders are separate from delivered-rate denominators.
+
+Inventory zeros and coverage gaps
+Where: June subset of inventory
+Sprints: 9, 10
+Expected behavior: Missing coverage is not treated as zero stock.
+
+A hot join key
+Where: P00001, intentionally about 35% of item selection
+Sprints: 16
+Expected behavior: Measure actual skew and preserve correctness when tuning.
+
+Late historical orders
+Where: 350 rows in the seven later batches
+Sprints: 11
+Expected behavior: Earlier business dates are repaired when needed.
+
+Additive event schema
+Where: app_version from July 4 batches
+Sprints: 7, 18
+Expected behavior: Older and newer events coexist.
+
+Insert, soft delete, update, no-op, late correction
+Where: customer_cdc, especially C000900
+Sprints: 12
+Expected behavior: Current and historical states remain consistent.
+
+Conflicting same-sequence changes
+Where: conflicting_customer_changes.jsonl
+Sprints: 6, 12
+Expected behavior: Ambiguity is surfaced rather than silently resolved.
+
+Header-only and wrong-header input
+Where: orders_header_only.csv, orders_wrong_header.csv
+Sprints: 5, 15
+Expected behavior: Zero rows and broken contract are different outcomes.
+
+Future time and wrong JSON field type
+Where: schema_break.jsonl
+Sprints: 7, 14
+Expected behavior: Invalid types/timestamps are visible and handled by policy.
+
+Over-refund, excess return, bad money
+Where: amount_and_quantity_errors.jsonl
+Sprints: 6, 14
+Expected behavior: Business limits are tested on tiny explicit cases.
+
+Null exclusion, ties, missing dates, fan-out
+Where: relational_edge_cases.jsonl
+Sprints: 3, 9, 13
+Expected behavior: Queries answer the intended business question.
+
+Late dimension and repeated local clock
+Where: relational_edge_cases.jsonl
+Sprints: 7, 12
+Expected behavior: Unknown identities and time ambiguity are handled explicitly.
+
+Controlled stream lateness and replay
+Where: stream_sequence/01 through 07
+Sprints: 17
+Expected behavior: Observed watermark and deduplication behavior is documented.

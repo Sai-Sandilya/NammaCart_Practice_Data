@@ -1,0 +1,6 @@
+{"case_id":"NULL_NOT_IN","left_keys":[1,2,3],"right_keys":[2,null]}
+{"case_id":"TIED_RANK","rows":[{"product_id":"A","revenue_paise":1000},{"product_id":"B","revenue_paise":1000},{"product_id":"C","revenue_paise":900}]}
+{"case_id":"MISSING_DAY","rows":[{"date":"2025-01-01","sales_paise":100},{"date":"2025-01-03","sales_paise":300}]}
+{"case_id":"LATE_DIMENSION","order_id":"FIX_ORDER_1","customer_id":"FIX_CUSTOMER_1","order_ts":"2025-07-08T10:00:00Z","customer_arrives_ts":"2025-07-09T10:00:00Z"}
+{"case_id":"DST_FALLBACK","timezone":"America/New_York","utc_instants":["2025-11-02T05:30:00Z","2025-11-02T06:30:00Z"]}
+{"case_id":"JOIN_MULTIPLICATION","order_id":"FIX_JOIN","line_amounts_paise":[100,200],"payment_amounts_paise":[100,200],"expected_line_total_paise":300}

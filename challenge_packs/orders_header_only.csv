@@ -1,0 +1,1 @@
+order_id,customer_id,store_id,order_ts,order_status,sales_channel,shipping_fee_paise,order_total_paise,source_updated_at

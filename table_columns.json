@@ -1,0 +1,95 @@
+{
+  "customers": [
+    "customer_id",
+    "customer_name",
+    "email",
+    "city",
+    "state",
+    "signup_ts",
+    "segment",
+    "is_active",
+    "source_updated_at"
+  ],
+  "categories": [
+    "category_id",
+    "category_name",
+    "parent_category_id"
+  ],
+  "suppliers": [
+    "supplier_id",
+    "supplier_name",
+    "city",
+    "lead_time_days"
+  ],
+  "products": [
+    "product_id",
+    "product_name",
+    "category_id",
+    "supplier_id",
+    "brand",
+    "catalog_price_paise",
+    "unit_cost_paise",
+    "is_active"
+  ],
+  "stores": [
+    "store_id",
+    "store_name",
+    "city",
+    "state",
+    "store_type"
+  ],
+  "orders": [
+    "order_id",
+    "customer_id",
+    "store_id",
+    "order_ts",
+    "order_status",
+    "sales_channel",
+    "shipping_fee_paise",
+    "order_total_paise",
+    "source_updated_at"
+  ],
+  "order_items": [
+    "order_item_id",
+    "order_id",
+    "product_id",
+    "quantity",
+    "unit_price_paise",
+    "discount_paise"
+  ],
+  "payments": [
+    "payment_id",
+    "order_id",
+    "payment_ts",
+    "payment_type",
+    "payment_status",
+    "payment_method",
+    "amount_paise",
+    "related_return_id"
+  ],
+  "shipments": [
+    "shipment_id",
+    "order_id",
+    "carrier",
+    "shipped_ts",
+    "promised_delivery_ts",
+    "delivered_ts",
+    "shipment_status"
+  ],
+  "returns": [
+    "return_id",
+    "order_item_id",
+    "return_ts",
+    "return_quantity",
+    "refund_amount_paise",
+    "reason",
+    "return_status"
+  ],
+  "inventory": [
+    "snapshot_date",
+    "store_id",
+    "product_id",
+    "on_hand_quantity",
+    "reorder_level"
+  ]
+}

@@ -1,0 +1,5 @@
+{"case_id":"OVER_REFUND","order_id":"O0000017","refund_amount_paise":999999999}
+{"case_id":"NEGATIVE_PRICE","unit_price_paise":-100}
+{"case_id":"EXCESS_DISCOUNT","quantity":1,"unit_price_paise":100,"discount_paise":200}
+{"case_id":"RETURN_TOO_MANY","purchased_quantity":2,"already_returned_quantity":1,"new_return_quantity":2}
+{"case_id":"MONEY_TEXT","amount_paise":"one hundred"}

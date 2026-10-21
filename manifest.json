@@ -1,0 +1,1111 @@
+{
+  "dataset": "NammaCart",
+  "version": "1.0",
+  "seed": 4217,
+  "base_logical_orders": 100000,
+  "incremental_logical_orders": 7000,
+  "currency": "INR",
+  "money_unit": "paise",
+  "timestamps": "UTC ISO-8601",
+  "files": [
+    {
+      "path": "baseline/categories/part-00000.csv",
+      "rows": 12,
+      "bytes": 271,
+      "sha256": "02ea8582d4471d58eeb070f1b578d5b3cbe0f6bad5fab11ba57d9281904426a4",
+      "scope": "baseline",
+      "table": "categories"
+    },
+    {
+      "path": "baseline/customers/part-00000.csv",
+      "rows": 20020,
+      "bytes": 2508551,
+      "sha256": "6b521dac0b98610e91d7af94bb92e718c134ee48510c2976a31e35f7074623bb",
+      "scope": "baseline",
+      "table": "customers"
+    },
+    {
+      "path": "baseline/inventory/part-00000.csv",
+      "rows": 25000,
+      "bytes": 720889,
+      "sha256": "a57ad07896bf314e09fa665d86c2e69035505888b2fac67c66216a40e1133422",
+      "scope": "baseline",
+      "table": "inventory"
+    },
+    {
+      "path": "baseline/inventory/part-00001.csv",
+      "rows": 25000,
+      "bytes": 720856,
+      "sha256": "ee3dd12aeefd96b3a32aac3ff0d92c7ba29d055867dca245aaa8dfd31eb08bcb",
+      "scope": "baseline",
+      "table": "inventory"
+    },
+    {
+      "path": "baseline/inventory/part-00002.csv",
+      "rows": 10000,
+      "bytes": 288342,
+      "sha256": "1568940b313654daf6fe60f9d781192fea49f50ac8780af5ddd195de5a90cf8a",
+      "scope": "baseline",
+      "table": "inventory"
+    },
+    {
+      "path": "baseline/order_items/part-00000.csv",
+      "rows": 25000,
+      "bytes": 942667,
+      "sha256": "c938a9c1e461ab6b6390838525d2e30d10fc462102d6f34fb89f8389f094eb35",
+      "scope": "baseline",
+      "table": "order_items"
+    },
+    {
+      "path": "baseline/order_items/part-00001.csv",
+      "rows": 25000,
+      "bytes": 942691,
+      "sha256": "2aba9c171fe972aff644400d9a1c4beb7b68bdf5a2395d889794416a70d1ccab",
+      "scope": "baseline",
+      "table": "order_items"
+    },
+    {
+      "path": "baseline/order_items/part-00002.csv",
+      "rows": 25000,
+      "bytes": 943088,
+      "sha256": "a1f2e2883cc92710623ea5ee2dab5f3ac83acdefe7e4a83ca9e91d77655085aa",
+      "scope": "baseline",
+      "table": "order_items"
+    },
+    {
+      "path": "baseline/order_items/part-00003.csv",
+      "rows": 25000,
+      "bytes": 942691,
+      "sha256": "01b4897bf4421a0c543bfb7d3d4c942c6011f9f14a753387fe40bab120ca9030",
+      "scope": "baseline",
+      "table": "order_items"
+    },
+    {
+      "path": "baseline/order_items/part-00004.csv",
+      "rows": 25000,
+      "bytes": 941999,
+      "sha256": "e667bf2967df22e82b39660e4d322521356efa143ccd4687cc64d017a85c9b3c",
+      "scope": "baseline",
+      "table": "order_items"
+    },
+    {
+      "path": "baseline/order_items/part-00005.csv",
+      "rows": 25000,
+      "bytes": 942441,
+      "sha256": "30737c5527824c4add60b59671b41c68c2f350f7a523f018f2e8ae9d28532dc6",
+      "scope": "baseline",
+      "table": "order_items"
+    },
+    {
+      "path": "baseline/order_items/part-00006.csv",
+      "rows": 25000,
+      "bytes": 942515,
+      "sha256": "833f545ed013635dbb36b92a36b393d2f6ff777ff6ff312eacfb1991a9463e11",
+      "scope": "baseline",
+      "table": "order_items"
+    },
+    {
+      "path": "baseline/order_items/part-00007.csv",
+      "rows": 25000,
+      "bytes": 942434,
+      "sha256": "35e0472e1f21b5a4a9d5c64094fe4652e044b5e824512614873c8ae47d03f3fc",
+      "scope": "baseline",
+      "table": "order_items"
+    },
+    {
+      "path": "baseline/order_items/part-00008.csv",
+      "rows": 25000,
+      "bytes": 942056,
+      "sha256": "9cd86817abf6825f2bd476e75e5445b39ca78f7d378d033a04f015ddf75fa58c",
+      "scope": "baseline",
+      "table": "order_items"
+    },
+    {
+      "path": "baseline/order_items/part-00009.csv",
+      "rows": 25000,
+      "bytes": 942389,
+      "sha256": "eee51295d180ac3d3856cb13e7f6e1d2c183d0923cf54643e30b764e7ebc2780",
+      "scope": "baseline",
+      "table": "order_items"
+    },
+    {
+      "path": "baseline/order_items/part-00010.csv",
+      "rows": 25000,
+      "bytes": 942927,
+      "sha256": "a94a69aae31f6a5ef384035a9c8638fff270326d9ef86a235264e1d80756c419",
+      "scope": "baseline",
+      "table": "order_items"
+    },
+    {
+      "path": "baseline/order_items/part-00011.csv",
+      "rows": 25000,
+      "bytes": 942961,
+      "sha256": "e7ee0bf262174c3344e21c449ff6b74aba1d39ddebbd16a8a1186b0c693a0820",
+      "scope": "baseline",
+      "table": "order_items"
+    },
+    {
+      "path": "baseline/order_items/part-00012.csv",
+      "rows": 307,
+      "bytes": 11666,
+      "sha256": "324fce4de771fc6105616fbccc1883b9c4f9d490cd99a4ada6e2dda167caf4a2",
+      "scope": "baseline",
+      "table": "order_items"
+    },
+    {
+      "path": "baseline/orders/part-00000.csv",
+      "rows": 25000,
+      "bytes": 2208962,
+      "sha256": "f6c6dd4d822e5ef5b78560e9ca763c1feb9f1aa216335c29a07030896570736e",
+      "scope": "baseline",
+      "table": "orders"
+    },
+    {
+      "path": "baseline/orders/part-00001.csv",
+      "rows": 25000,
+      "bytes": 2208765,
+      "sha256": "8cb68f7596fdf74976e6a59e9c32dd7b87e780c742a1b610d6b0973dc245577c",
+      "scope": "baseline",
+      "table": "orders"
+    },
+    {
+      "path": "baseline/orders/part-00002.csv",
+      "rows": 25000,
+      "bytes": 2208444,
+      "sha256": "d7435a221a422b6759b9485b9f62620536d8b2ffce4a68a2a11d8de7b9e89ccc",
+      "scope": "baseline",
+      "table": "orders"
+    },
+    {
+      "path": "baseline/orders/part-00003.csv",
+      "rows": 25000,
+      "bytes": 2208157,
+      "sha256": "546262265ad128f6072b96d46c472e271962ce3bde121389b8b4c0c3bc5398f5",
+      "scope": "baseline",
+      "table": "orders"
+    },
+    {
+      "path": "baseline/orders/part-00004.csv",
+      "rows": 100,
+      "bytes": 8950,
+      "sha256": "fac48e3989a2c89d7740af3a364c73a9d9876b49045082700dedc581efdd5e26",
+      "scope": "baseline",
+      "table": "orders"
+    },
+    {
+      "path": "baseline/payments/part-00000.csv",
+      "rows": 25000,
+      "bytes": 1806472,
+      "sha256": "3ee596d93d46e2463f06a73e52e82345660c3ac8e5d73bb607ee8013f8601fbb",
+      "scope": "baseline",
+      "table": "payments"
+    },
+    {
+      "path": "baseline/payments/part-00001.csv",
+      "rows": 25000,
+      "bytes": 1806741,
+      "sha256": "f5975d8bfeda5c127eae7ff8c57283a25b9a57761e675c056134be10c8281664",
+      "scope": "baseline",
+      "table": "payments"
+    },
+    {
+      "path": "baseline/payments/part-00002.csv",
+      "rows": 25000,
+      "bytes": 1806714,
+      "sha256": "35dc5f8fee7a91d89bf4d07b019104c6a4960b3520c5130adcf4994ec0a61d30",
+      "scope": "baseline",
+      "table": "payments"
+    },
+    {
+      "path": "baseline/payments/part-00003.csv",
+      "rows": 25000,
+      "bytes": 1806620,
+      "sha256": "ce6a18128a7f7af03815e09c7cb71e373798b20f0e187d23f018b541705105fb",
+      "scope": "baseline",
+      "table": "payments"
+    },
+    {
+      "path": "baseline/payments/part-00004.csv",
+      "rows": 15000,
+      "bytes": 1084192,
+      "sha256": "e9a8d1da181905ce52b3e063f2f6439606afb134ed2314c24033fe76f70f59dc",
+      "scope": "baseline",
+      "table": "payments"
+    },
+    {
+      "path": "baseline/products/part-00000.csv",
+      "rows": 2000,
+      "bytes": 138850,
+      "sha256": "f12afb9e76b580d11761d3274a1b0427ffac39f2e3536e994ad036824141aa40",
+      "scope": "baseline",
+      "table": "products"
+    },
+    {
+      "path": "baseline/returns/part-00000.csv",
+      "rows": 5000,
+      "bytes": 342668,
+      "sha256": "f18e353297301517d9246f49c3f7ba803dcfa3758762d29d48ef0c0ba16e7852",
+      "scope": "baseline",
+      "table": "returns"
+    },
+    {
+      "path": "baseline/shipments/part-00000.csv",
+      "rows": 25000,
+      "bytes": 2525090,
+      "sha256": "5bbb53b3549795e2f2513f39b0b76f8f50f9cc5b5e6996c0ba9200393c3aeef4",
+      "scope": "baseline",
+      "table": "shipments"
+    },
+    {
+      "path": "baseline/shipments/part-00001.csv",
+      "rows": 25000,
+      "bytes": 2525090,
+      "sha256": "823aecd83af8b5aba8e59069b4257177aa87335ee4d0504f28fa0993a1aba1bc",
+      "scope": "baseline",
+      "table": "shipments"
+    },
+    {
+      "path": "baseline/shipments/part-00002.csv",
+      "rows": 25000,
+      "bytes": 2525090,
+      "sha256": "87a79368e5329315a71508463d17f6df1435b0565bd406bf05b7ba502ae7296e",
+      "scope": "baseline",
+      "table": "shipments"
+    },
+    {
+      "path": "baseline/shipments/part-00003.csv",
+      "rows": 10000,
+      "bytes": 1010090,
+      "sha256": "8c07b79660285dfa3e2cad34c83ca4371b0b99494a6fdd7e6d62f588ce16efd5",
+      "scope": "baseline",
+      "table": "shipments"
+    },
+    {
+      "path": "baseline/stores/part-00000.csv",
+      "rows": 20,
+      "bytes": 1048,
+      "sha256": "c6c3475d629411122457c5e67f07c12c3f47fbed546f73e920076439f975c89c",
+      "scope": "baseline",
+      "table": "stores"
+    },
+    {
+      "path": "baseline/suppliers/part-00000.csv",
+      "rows": 40,
+      "bytes": 1606,
+      "sha256": "ec6dc4b1ca83a22f6b04908aaa12c4f25087cb1322a0428ddab47c3700d5f181",
+      "scope": "baseline",
+      "table": "suppliers"
+    },
+    {
+      "path": "baseline/web_events/part-00000.jsonl",
+      "rows": 25000,
+      "bytes": 10787296,
+      "sha256": "5c3c353407830b6e3554ddaa2616dc28fd4927effcbede65e190273549fc4154",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00001.jsonl",
+      "rows": 25000,
+      "bytes": 10826335,
+      "sha256": "2429987dbcbaa2cf637427b22a9aad66c879051b94487189be26c3ce3588f740",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00002.jsonl",
+      "rows": 25000,
+      "bytes": 10780674,
+      "sha256": "cfcc1a5e5e7e9ff48832efed73fb631e431543ed3816333dfed7fb506369a896",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00003.jsonl",
+      "rows": 25000,
+      "bytes": 10834435,
+      "sha256": "3c6d022e4b1ab326b7193ed641461fe5a86b8e6cfd1d4147bbf9198397f0c2c9",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00004.jsonl",
+      "rows": 25000,
+      "bytes": 10805648,
+      "sha256": "127c217e0d15fec751fcadb42336aba10c890ad304b12aa9b15b1faba053e8a1",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00005.jsonl",
+      "rows": 25000,
+      "bytes": 10833318,
+      "sha256": "d76599071a8278461cf1c982c65e2085aa3fc8dd9871cb350935dc88dd3b3e42",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00006.jsonl",
+      "rows": 25000,
+      "bytes": 10805396,
+      "sha256": "ba44c7e2c567cae8d301ab6f68f7cb9dfaa08d7e4665b72aa230096ded66ee3c",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00007.jsonl",
+      "rows": 25000,
+      "bytes": 10802722,
+      "sha256": "262548f212c6cbd55ec8027efbd576c6eab199b8642ef956a7c575445cbc4e96",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00008.jsonl",
+      "rows": 25000,
+      "bytes": 10791586,
+      "sha256": "052c1b5a9a021127e6fd2258aebe42408117acf2450796556d3288d26072c61a",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00009.jsonl",
+      "rows": 25000,
+      "bytes": 10802803,
+      "sha256": "e9e4d66de900ab2af14737dc8a9e25d06415c79dbdcc052371da67bc8aabfb43",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00010.jsonl",
+      "rows": 25000,
+      "bytes": 10825193,
+      "sha256": "daf3ad7cecc7cb826682d8d0c19300fc91c29286b71327bdb113414d8c0fe607",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00011.jsonl",
+      "rows": 25000,
+      "bytes": 10807005,
+      "sha256": "a74f2a8f44c744818ed63ff444d63247f57a27138b3072325fc58dfeedd07003",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00012.jsonl",
+      "rows": 25000,
+      "bytes": 10798323,
+      "sha256": "026a29ba4405a173aa7df703800501d2989225d4d124145b1b61e3b451f83db9",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00013.jsonl",
+      "rows": 25000,
+      "bytes": 10842611,
+      "sha256": "df023cd35df0990983d46c9e7b492583964779fdc91028d1ae7d0afe025c5268",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00014.jsonl",
+      "rows": 25000,
+      "bytes": 10812204,
+      "sha256": "c8d3c5b92578d60f58043e5b79a7671f74e6613683063655aba40d80ca676a95",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00015.jsonl",
+      "rows": 25000,
+      "bytes": 10820636,
+      "sha256": "1b88ba75f0b35d0ea4b358d68ff56a99545fe0af8260ba35a4bbb5b6e09f351b",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00016.jsonl",
+      "rows": 25000,
+      "bytes": 10801134,
+      "sha256": "a6f3d323b6c184434611fb7002d8ec8f7b2e7f53ec8ddee95a429daa6d26ef55",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "baseline/web_events/part-00017.jsonl",
+      "rows": 118,
+      "bytes": 50846,
+      "sha256": "5c7aebedc1de51c5c4649befc36bd0374bdcdfb8dce12a6aedd392e779015916",
+      "scope": "baseline",
+      "table": "web_events"
+    },
+    {
+      "path": "challenge_packs/amount_and_quantity_errors.jsonl",
+      "rows": 5,
+      "bytes": 381,
+      "sha256": "d0356f13c9d3852a4bfd0756bc49643e79db2486a1f668be28284ea26a450eb6",
+      "scope": "fixtures",
+      "table": "challenge_packs"
+    },
+    {
+      "path": "challenge_packs/conflicting_customer_changes.jsonl",
+      "rows": 2,
+      "bytes": 850,
+      "sha256": "50d4fe9fb2e864da7006c9c626387e6b1a9c4d83e5d26a7d9067fd94a10ac190",
+      "scope": "fixtures",
+      "table": "challenge_packs"
+    },
+    {
+      "path": "challenge_packs/orders_header_only.csv",
+      "rows": 0,
+      "bytes": 121,
+      "sha256": "f503baccbfd21a77fd149351c37d27faa6d7bb8d5b88615ff0ba1a5a69a75b51",
+      "scope": "fixtures",
+      "table": "challenge_packs"
+    },
+    {
+      "path": "challenge_packs/orders_wrong_header.csv",
+      "rows": 1,
+      "bytes": 66,
+      "sha256": "16f06d37176188bdf363a3158db4d7f7dd02ac586c92d14d1d8dbdd1fc13c51d",
+      "scope": "fixtures",
+      "table": "challenge_packs"
+    },
+    {
+      "path": "challenge_packs/relational_edge_cases.jsonl",
+      "rows": 6,
+      "bytes": 772,
+      "sha256": "045e26b7546c4a892bc922c77cba0bf5eaae0b4b5c5c6e22ef6dd225bb19356f",
+      "scope": "fixtures",
+      "table": "challenge_packs"
+    },
+    {
+      "path": "challenge_packs/schema_break.jsonl",
+      "rows": 2,
+      "bytes": 673,
+      "sha256": "a6d764c84b08edcd777d10cd7eda30e82ca8479cca08feda9c4e495a1f84e2fc",
+      "scope": "fixtures",
+      "table": "challenge_packs"
+    },
+    {
+      "path": "challenge_packs/stream_sequence/01.jsonl",
+      "rows": 1,
+      "bytes": 323,
+      "sha256": "ac9cb00beb9e2b5761faede7be48cd0fbd505d50d7bd42f905bff6e6ea12da8d",
+      "scope": "fixtures",
+      "table": "stream_sequence"
+    },
+    {
+      "path": "challenge_packs/stream_sequence/02.jsonl",
+      "rows": 1,
+      "bytes": 323,
+      "sha256": "b7008f5944ed7a9b0a68753ec412712c62cffc7df92771c348c7e58cb047002e",
+      "scope": "fixtures",
+      "table": "stream_sequence"
+    },
+    {
+      "path": "challenge_packs/stream_sequence/03.jsonl",
+      "rows": 1,
+      "bytes": 323,
+      "sha256": "b1f444af02c4cc901cd37a04a1476baca6b1c192289b893c74dc7e842cb7cf39",
+      "scope": "fixtures",
+      "table": "stream_sequence"
+    },
+    {
+      "path": "challenge_packs/stream_sequence/04.jsonl",
+      "rows": 1,
+      "bytes": 323,
+      "sha256": "ede0864cdc2eae1966710f68e23bc9bab1a3200fc9bffecb35572f819c0f0388",
+      "scope": "fixtures",
+      "table": "stream_sequence"
+    },
+    {
+      "path": "challenge_packs/stream_sequence/05.jsonl",
+      "rows": 1,
+      "bytes": 323,
+      "sha256": "60002189fc6ed010b5aa1c373e13f9f2a79a2e89bf3a08c5915109b3f9f142bb",
+      "scope": "fixtures",
+      "table": "stream_sequence"
+    },
+    {
+      "path": "challenge_packs/stream_sequence/06.jsonl",
+      "rows": 1,
+      "bytes": 323,
+      "sha256": "8383ffdaeb6888a67f2872eb5d77a949d1ae090457614b87ab15b6d00fa9c981",
+      "scope": "fixtures",
+      "table": "stream_sequence"
+    },
+    {
+      "path": "challenge_packs/stream_sequence/07_duplicate.jsonl",
+      "rows": 1,
+      "bytes": 323,
+      "sha256": "60002189fc6ed010b5aa1c373e13f9f2a79a2e89bf3a08c5915109b3f9f142bb",
+      "scope": "fixtures",
+      "table": "stream_sequence"
+    },
+    {
+      "path": "hand_check/order_items.csv",
+      "rows": 3,
+      "bytes": 122,
+      "sha256": "48d3f579a12fa946e20ef77e22e74c3d15acc1b20a552b6c8d047691c98acbd5",
+      "scope": "fixtures",
+      "table": "hand_check"
+    },
+    {
+      "path": "hand_check/orders.csv",
+      "rows": 2,
+      "bytes": 121,
+      "sha256": "a2082df51422b430369a1098c1201ce62605f847030177443b214836206ce4c5",
+      "scope": "fixtures",
+      "table": "hand_check"
+    },
+    {
+      "path": "hand_check/payments.csv",
+      "rows": 3,
+      "bytes": 131,
+      "sha256": "9c85b38fa60eb5b83613d4e08b6acb6dedcdfb0a4cc10a3281c4256047589177",
+      "scope": "fixtures",
+      "table": "hand_check"
+    },
+    {
+      "path": "hand_check/returns.csv",
+      "rows": 1,
+      "bytes": 77,
+      "sha256": "cc501ac95cd7e08559b42d941fdaba15eefb904a66ba9ec1cb3a6025dbde9bcb",
+      "scope": "fixtures",
+      "table": "hand_check"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-01/customer_cdc/part-00000.jsonl",
+      "rows": 102,
+      "bytes": 69253,
+      "sha256": "dcb2b52d9531c23f0609839d2cc7432665f72b535ec31a9749ccc29481d51c07",
+      "scope": "incremental",
+      "table": "customer_cdc"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-01/order_items/part-00000.csv",
+      "rows": 2918,
+      "bytes": 109982,
+      "sha256": "cbd3bd3d65a49029ad8f2bf50b073c82eac678f7c1c2fba089436aec7cc83e29",
+      "scope": "incremental",
+      "table": "order_items"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-01/orders/part-00000.csv",
+      "rows": 1001,
+      "bytes": 84795,
+      "sha256": "4d225b41d25c93eded2cae3f54f5e466d9b4482bb9e18f77820c81deb860d7f0",
+      "scope": "incremental",
+      "table": "orders"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-01/payments/part-00000.csv",
+      "rows": 1103,
+      "bytes": 79471,
+      "sha256": "bfca1cde88456137fc77d0cb196a50c6fa3d383e98195e73198496f9beb800c9",
+      "scope": "incremental",
+      "table": "payments"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-01/returns/part-00000.csv",
+      "rows": 3,
+      "bytes": 296,
+      "sha256": "a6e082211ede2282a06e532d0786375cf5e8a450392272242a266ae82be6457b",
+      "scope": "incremental",
+      "table": "returns"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-01/shipments/part-00000.csv",
+      "rows": 118,
+      "bytes": 10716,
+      "sha256": "48cff0bb4846ca20ec249256c3090a520e33c58eeb6d5043941576a1aae69a32",
+      "scope": "incremental",
+      "table": "shipments"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-01/web_events/part-00000.jsonl",
+      "rows": 4252,
+      "bytes": 1826831,
+      "sha256": "2c5e56c0da0d760812d235bff2051dc7a4cf4d431ab44ceeb42f8662b217c60a",
+      "scope": "incremental",
+      "table": "web_events"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-02/customer_cdc/part-00000.jsonl",
+      "rows": 102,
+      "bytes": 69365,
+      "sha256": "e3efd2d73ee8f115f4f4b1f78b35daea160a5beacfe4e4fc8d5d07fad820563b",
+      "scope": "incremental",
+      "table": "customer_cdc"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-02/order_items/part-00000.csv",
+      "rows": 2947,
+      "bytes": 111174,
+      "sha256": "d9ec286ed20ac184cffef9efe5411bc26d3fa724410ef621090612e7ea2a1108",
+      "scope": "incremental",
+      "table": "order_items"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-02/orders/part-00000.csv",
+      "rows": 1001,
+      "bytes": 84801,
+      "sha256": "581c7ba2b6c3cfe3dc5a910b1c7cbde14a3cf9b615769b452feb91e5a2c17dd4",
+      "scope": "incremental",
+      "table": "orders"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-02/payments/part-00000.csv",
+      "rows": 1103,
+      "bytes": 79459,
+      "sha256": "cb1df30b8070d64866ff7cefc51eba41bcb1ef432cfc3afa5f65e5840deae536",
+      "scope": "incremental",
+      "table": "payments"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-02/returns/part-00000.csv",
+      "rows": 3,
+      "bytes": 297,
+      "sha256": "394ab1e7710d954ca550ebe6fe3e29fced8584e39bbf837a02ddc4ecc07ecb04",
+      "scope": "incremental",
+      "table": "returns"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-02/shipments/part-00000.csv",
+      "rows": 114,
+      "bytes": 10388,
+      "sha256": "5b2123cc97e9d2537472190f87427f1e36a6a92805819d3f3c59dea9f2784490",
+      "scope": "incremental",
+      "table": "shipments"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-02/web_events/part-00000.jsonl",
+      "rows": 4251,
+      "bytes": 1829284,
+      "sha256": "d48b2c5d17b63793dda5221d357e5d2b779346e5b7329abea5e00f9578c715d4",
+      "scope": "incremental",
+      "table": "web_events"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-03/customer_cdc/part-00000.jsonl",
+      "rows": 102,
+      "bytes": 69355,
+      "sha256": "dd34b306831fa892953ccf82fd53b1b89cf8b4f1c323d85d4d7c55a1d0fd9838",
+      "scope": "incremental",
+      "table": "customer_cdc"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-03/order_items/part-00000.csv",
+      "rows": 2961,
+      "bytes": 111820,
+      "sha256": "dccdd1bffdc51608a8b81796c166dfa2b31ccfc1d5bb7685f62ea453df81cf2c",
+      "scope": "incremental",
+      "table": "order_items"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-03/orders/part-00000.csv",
+      "rows": 1001,
+      "bytes": 84732,
+      "sha256": "9f44e9805e5ca15abef46269053f26f5f4e2c543235ac6af76e182e0b2d9220d",
+      "scope": "incremental",
+      "table": "orders"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-03/payments/part-00000.csv",
+      "rows": 1103,
+      "bytes": 79485,
+      "sha256": "75ce1a9f83e5bfb47c0d60ef51c52f3cb8f188463b2747418bd698f6f3c4c078",
+      "scope": "incremental",
+      "table": "payments"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-03/returns/part-00000.csv",
+      "rows": 3,
+      "bytes": 297,
+      "sha256": "6bdd4a5873444cdf9dae8256ae50e3d028b1b92f233f00ed7f7861474094ebbc",
+      "scope": "incremental",
+      "table": "returns"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-03/shipments/part-00000.csv",
+      "rows": 112,
+      "bytes": 10224,
+      "sha256": "27c1e52ba421f7e3292b4e80347ecadef99629d343f174edd8e02f79536a953e",
+      "scope": "incremental",
+      "table": "shipments"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-03/web_events/part-00000.jsonl",
+      "rows": 4251,
+      "bytes": 1831459,
+      "sha256": "2f805e6793073c251a6084541ae37feca245798b59f7647ad4df759976659e23",
+      "scope": "incremental",
+      "table": "web_events"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-04/customer_cdc/part-00000.jsonl",
+      "rows": 102,
+      "bytes": 69366,
+      "sha256": "75df15b53f720904751d89e88632fb5d1720add3f710a299780fef1b9adf31d5",
+      "scope": "incremental",
+      "table": "customer_cdc"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-04/order_items/part-00000.csv",
+      "rows": 3035,
+      "bytes": 114474,
+      "sha256": "051b757daeab9cb07f00274e35aa9de2c7d2a47d7b4dd9d650472f4d28cd43e6",
+      "scope": "incremental",
+      "table": "order_items"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-04/orders/part-00000.csv",
+      "rows": 1001,
+      "bytes": 84748,
+      "sha256": "1c34593fc183b49d7b5339f094c82989fdecc1248594a8ab97f891aaff05c178",
+      "scope": "incremental",
+      "table": "orders"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-04/payments/part-00000.csv",
+      "rows": 1102,
+      "bytes": 79369,
+      "sha256": "34d00969c2464dbc9dd66408f3ec9174bf8b0a68d5451ff55cd64aba6e747cee",
+      "scope": "incremental",
+      "table": "payments"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-04/returns/part-00000.csv",
+      "rows": 2,
+      "bytes": 225,
+      "sha256": "47b0df8cf405acbad285967fb5783952037f7a3fbd82ec559b67dd96aaece5d8",
+      "scope": "incremental",
+      "table": "returns"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-04/shipments/part-00000.csv",
+      "rows": 114,
+      "bytes": 10388,
+      "sha256": "17ed2631e6a4e8d09611864d1af64d135bcb08a25bdc1070b8df5e47da223fa5",
+      "scope": "incremental",
+      "table": "shipments"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-04/web_events/part-00000.jsonl",
+      "rows": 4251,
+      "bytes": 1935099,
+      "sha256": "13809f04fb8805446047b74421c9adac28c8ce5da1ea84b525603a0236e87d9c",
+      "scope": "incremental",
+      "table": "web_events"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-05/customer_cdc/part-00000.jsonl",
+      "rows": 101,
+      "bytes": 68917,
+      "sha256": "ac175ae7b3a9982f1f15a52611ad5a142009dc8da36d99eebedd392607b3a618",
+      "scope": "incremental",
+      "table": "customer_cdc"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-05/order_items/part-00000.csv",
+      "rows": 2991,
+      "bytes": 112751,
+      "sha256": "0b328cb1a3adb709b2f92f63082fc3ca88477c9004c30d6ca5160581c5e12932",
+      "scope": "incremental",
+      "table": "order_items"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-05/orders/part-00000.csv",
+      "rows": 1001,
+      "bytes": 84714,
+      "sha256": "6f6604d23cc0904ea7f2d1b8a4fa1cec39b395ee4eb61770fcfe3e00bb68a354",
+      "scope": "incremental",
+      "table": "orders"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-05/payments/part-00000.csv",
+      "rows": 1103,
+      "bytes": 79453,
+      "sha256": "306bd628d8b3995c215ac730ea1abbd72e4499bbf34fabaf8e84f3965c0e6837",
+      "scope": "incremental",
+      "table": "payments"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-05/returns/part-00000.csv",
+      "rows": 3,
+      "bytes": 296,
+      "sha256": "515f5d239c10c385bceecc3a201ae6ed2846bc47957becbc24fdc6646c3daad3",
+      "scope": "incremental",
+      "table": "returns"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-05/shipments/part-00000.csv",
+      "rows": 107,
+      "bytes": 9814,
+      "sha256": "89279d58a3127c12a8de90c65a9389ffd03075321167814f43abd9c55f9a0574",
+      "scope": "incremental",
+      "table": "shipments"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-05/web_events/part-00000.jsonl",
+      "rows": 4251,
+      "bytes": 1930312,
+      "sha256": "00d2f4c62b55256223c89203c5a32f9ec99d063ec3121ae0fba9b3d6bdab9b9d",
+      "scope": "incremental",
+      "table": "web_events"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-06/customer_cdc/part-00000.jsonl",
+      "rows": 111,
+      "bytes": 73306,
+      "sha256": "fbbedba0d7de39f949a77c5b6ea26f24e75154c7c234f452483842d87a050eff",
+      "scope": "incremental",
+      "table": "customer_cdc"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-06/order_items/part-00000.csv",
+      "rows": 2965,
+      "bytes": 111895,
+      "sha256": "4a69398e38210c7428331673c0f30e05ec7677e3a11efb6cd308bdc644a9d25f",
+      "scope": "incremental",
+      "table": "order_items"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-06/orders/part-00000.csv",
+      "rows": 1001,
+      "bytes": 84773,
+      "sha256": "952dd60ba621f5f58eda0b8ca80eed7779c6e2871e953c84e7bb459e8c268886",
+      "scope": "incremental",
+      "table": "orders"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-06/payments/part-00000.csv",
+      "rows": 1103,
+      "bytes": 79457,
+      "sha256": "86e4106d233bea8d4ac66063a9d776a3531d08b00ed5e8fb932fafa5787af41f",
+      "scope": "incremental",
+      "table": "payments"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-06/returns/part-00000.csv",
+      "rows": 3,
+      "bytes": 295,
+      "sha256": "d731cd22f214aa03bc1c588d30e40fddcbcd198f7c87527d2e4b37f07d3304ff",
+      "scope": "incremental",
+      "table": "returns"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-06/shipments/part-00000.csv",
+      "rows": 112,
+      "bytes": 10224,
+      "sha256": "eb8fc4016ae22a67c4a414ee52da23240d2a7bb06739d8a92587ace1d21c8616",
+      "scope": "incremental",
+      "table": "shipments"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-06/web_events/part-00000.jsonl",
+      "rows": 4252,
+      "bytes": 1927043,
+      "sha256": "b9e758e44568dd04da40c06f0241353796d6c9bf4f61bebb40968ea1710c5437",
+      "scope": "incremental",
+      "table": "web_events"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-07/customer_cdc/part-00000.jsonl",
+      "rows": 101,
+      "bytes": 68925,
+      "sha256": "efbac4a045e97ad12e13214d458781cf3fc2279927c868ddc49185e1c580e695",
+      "scope": "incremental",
+      "table": "customer_cdc"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-07/order_items/part-00000.csv",
+      "rows": 3021,
+      "bytes": 114056,
+      "sha256": "035406754a849051244c4fb298ddfdbc759c0f0b2d7fb50092eda1aae673ea5b",
+      "scope": "incremental",
+      "table": "order_items"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-07/orders/part-00000.csv",
+      "rows": 1001,
+      "bytes": 84712,
+      "sha256": "f7ce173d0188ca646a9514668c2a409865a1ed5e9ae554ea8614a231e6d50ca9",
+      "scope": "incremental",
+      "table": "orders"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-07/payments/part-00000.csv",
+      "rows": 1103,
+      "bytes": 79469,
+      "sha256": "83b1c0d135bd0d8456273cdab1fd88441107c8d2d01af61b9e8c6c1f839c0616",
+      "scope": "incremental",
+      "table": "payments"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-07/returns/part-00000.csv",
+      "rows": 3,
+      "bytes": 296,
+      "sha256": "849c01cc152a77aee4fe3436f759345118fe627ac68a5fb6ec8133beb3d78965",
+      "scope": "incremental",
+      "table": "returns"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-07/shipments/part-00000.csv",
+      "rows": 105,
+      "bytes": 9650,
+      "sha256": "3357daa213f3f1279bb3218d32a68bcfc30176b6d96209954550743718ac99d4",
+      "scope": "incremental",
+      "table": "shipments"
+    },
+    {
+      "path": "incremental/batch_date=2025-07-07/web_events/part-00000.jsonl",
+      "rows": 4251,
+      "bytes": 1933873,
+      "sha256": "38fb7f4cee99007caf1f220a93d8c7ffb3573ea3e51bcec0e5e72a737eb021f2",
+      "scope": "incremental",
+      "table": "web_events"
+    }
+  ],
+  "counts": [
+    {
+      "scope": "baseline",
+      "table": "categories",
+      "rows": 12
+    },
+    {
+      "scope": "baseline",
+      "table": "customers",
+      "rows": 20020
+    },
+    {
+      "scope": "baseline",
+      "table": "inventory",
+      "rows": 60000
+    },
+    {
+      "scope": "baseline",
+      "table": "order_items",
+      "rows": 300307
+    },
+    {
+      "scope": "baseline",
+      "table": "orders",
+      "rows": 100100
+    },
+    {
+      "scope": "baseline",
+      "table": "payments",
+      "rows": 115000
+    },
+    {
+      "scope": "baseline",
+      "table": "products",
+      "rows": 2000
+    },
+    {
+      "scope": "baseline",
+      "table": "returns",
+      "rows": 5000
+    },
+    {
+      "scope": "baseline",
+      "table": "shipments",
+      "rows": 85000
+    },
+    {
+      "scope": "baseline",
+      "table": "stores",
+      "rows": 20
+    },
+    {
+      "scope": "baseline",
+      "table": "suppliers",
+      "rows": 40
+    },
+    {
+      "scope": "baseline",
+      "table": "web_events",
+      "rows": 425118
+    },
+    {
+      "scope": "fixtures",
+      "table": "challenge_packs",
+      "rows": 16
+    },
+    {
+      "scope": "fixtures",
+      "table": "hand_check",
+      "rows": 9
+    },
+    {
+      "scope": "fixtures",
+      "table": "stream_sequence",
+      "rows": 7
+    },
+    {
+      "scope": "incremental",
+      "table": "customer_cdc",
+      "rows": 721
+    },
+    {
+      "scope": "incremental",
+      "table": "order_items",
+      "rows": 20838
+    },
+    {
+      "scope": "incremental",
+      "table": "orders",
+      "rows": 7007
+    },
+    {
+      "scope": "incremental",
+      "table": "payments",
+      "rows": 7720
+    },
+    {
+      "scope": "incremental",
+      "table": "returns",
+      "rows": 20
+    },
+    {
+      "scope": "incremental",
+      "table": "shipments",
+      "rows": 782
+    },
+    {
+      "scope": "incremental",
+      "table": "web_events",
+      "rows": 29759
+    }
+  ],
+  "raw_records": 1179496,
+  "raw_bytes": 241330107,
+  "injected_conditions": {
+    "city_case_whitespace": 639,
+    "blank_optional_city": 206,
+    "invalid_optional_email": 198,
+    "customer_exact_duplicate": 20,
+    "csv_quoted_text": 10,
+    "orphan_item_product": 110,
+    "negative_item_quantity": 109,
+    "invalid_order_timestamp": 108,
+    "orphan_order_customer": 107,
+    "missing_order_customer": 107,
+    "order_exact_duplicate": 107,
+    "item_exact_duplicate": 107,
+    "event_exact_duplicate": 106,
+    "anonymous_event": 53,
+    "malformed_json_line": 21,
+    "late_arriving_orders": 350,
+    "cdc_exact_duplicate": 7
+  },
+  "notes": [
+    "Counts include duplicate physical records. Malformed JSON lines count as physical records.",
+    "Challenge packs and hand_check are isolated and must not be merged into baseline.",
+    "Customer CDC change IDs are event IDs; order/item IDs are business keys.",
+    "The baseline extract cutoff is 2025-07-01T00:00:00Z. The seven delta cutoffs are the following midnights."
+  ]
+}

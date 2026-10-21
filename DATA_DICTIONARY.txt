@@ -1,0 +1,128 @@
+DATA DICTIONARY
+Raw values can intentionally fail these target types.
+
+CUSTOMERS
+One customer profile per customer_id before exact replays. Required keys must be usable; city and email can have repairable quality issues.
+  customer_id | Text | Customer business key, such as C000001.
+  customer_name | Text | Synthetic display name; may contain CSV quotes or commas.
+  email | Text, optional | Synthetic email; invalid values must be flagged and nullified.
+  city, state | Text | Customer location. City can be blank, lower-case or padded.
+  signup_ts | UTC timestamp | Customer creation time in 2024; initial history starts here.
+  segment | Text enum | NEW, REGULAR or VIP.
+  is_active | Boolean | CSV true/false; a soft delete later changes current state.
+  source_updated_at | UTC timestamp | Source update time, not your ingestion timestamp.
+
+CATEGORIES
+One category per category_id. Four root categories and eight child categories.
+  category_id | Text | Category business key.
+  category_name | Text | Readable category name.
+  parent_category_id | Text, optional | Another category_id; empty for a root category.
+
+SUPPLIERS
+One supplier per supplier_id.
+  supplier_id | Text | Supplier business key.
+  supplier_name | Text | Synthetic supplier label.
+  city | Text | Supplier city.
+  lead_time_days | Integer | Planning estimate, not an observed shipment duration.
+
+PRODUCTS
+One catalog product per product_id. Historical order prices come from order_items, not this catalog.
+  product_id | Text | Product business key; P00001 is intentionally popular.
+  product_name | Text | Synthetic product label.
+  category_id, supplier_id | Text | References to categories and suppliers.
+  brand | Text | Synthetic brand label.
+  catalog_price_paise | 64-bit integer | Current catalog price in paise.
+  unit_cost_paise | 64-bit integer | Static synthetic reference cost; insufficient for real historical margin accounting.
+  is_active | Boolean | Current catalog activity. Inactive products can have valid historical orders.
+
+STORES
+One store or warehouse per store_id.
+  store_id | Text | Store business key.
+  store_name | Text | Synthetic location name.
+  city, state | Text | Location geography.
+  store_type | Text enum | STORE or WAREHOUSE.
+
+ORDERS
+One order header per order_id before exact replays. Initial and incremental records are inserts; customer history changes are in a separate CDC feed.
+  order_id | Text | Order business key, such as O0000001.
+  customer_id, store_id | Text | Required references to customer and store; deliberate customer defects exist.
+  order_ts | UTC timestamp | Order business time; deliberately invalid text occurs in some records.
+  order_status | Text enum | PENDING, CANCELLED, PAID, SHIPPED or DELIVERED.
+  sales_channel | Text enum | WEB, APP or STORE.
+  shipping_fee_paise | 64-bit integer | Order-level shipping fee; do not repeat it per item.
+  order_total_paise | 64-bit integer | Sum of line net plus shipping, before returns. No tax component.
+  source_updated_at | UTC timestamp | Time of the represented state. Keep separate from file arrival.
+
+ORDER_ITEMS
+One purchased line per order_item_id before exact replays. An order can have several lines for the same product.
+  order_item_id | Text | Line business key, such as I0000001_1.
+  order_id | Text | Parent order key.
+  product_id | Text | Product key; P99999 is an intentional missing product.
+  quantity | Integer | Purchased units; must be positive after validation.
+  unit_price_paise | 64-bit integer | Price per unit at purchase time.
+  discount_paise | 64-bit integer | Total line discount, bounded by quantity times unit price.
+
+PAYMENTS
+One payment attempt or refund per payment_id. An order can have a failed attempt, a successful charge, and a later refund.
+  payment_id | Text | Payment-event business key; do not deduplicate by order_id.
+  order_id | Text | Parent order key.
+  payment_ts | UTC timestamp | Payment event time; use this for cash-date reports.
+  payment_type | Text enum | CHARGE or REFUND.
+  payment_status | Text enum | SUCCESS or FAILED; only SUCCESS affects cash.
+  payment_method | Text enum | CARD, UPI or NETBANKING.
+  amount_paise | 64-bit integer | Positive magnitude. Payment type determines cash direction.
+  related_return_id | Text, optional | Return business key for REFUND; empty for CHARGE.
+
+SHIPMENTS
+One shipment per shipment_id in this dataset, at most one per order. Production designs may need split shipments.
+  shipment_id | Text | Shipment business key.
+  order_id | Text | Parent order key.
+  carrier | Text | CarrierA, CarrierB or CarrierC.
+  shipped_ts | UTC timestamp | Shipment departure time.
+  promised_delivery_ts | UTC timestamp | Original promised deadline.
+  delivered_ts | UTC timestamp, optional | Actual delivery time; blank while in transit.
+  shipment_status | Text enum | IN_TRANSIT or DELIVERED.
+
+RETURNS
+One return per return_id, referring to a single item. Current data has at most one partial return per selected order, but your tests must cover cumulative limits.
+  return_id | Text | Return business key.
+  order_item_id | Text | Returned item; derive order_id through the item relationship.
+  return_ts | UTC timestamp | Return event time, after delivery.
+  return_quantity | Integer | Positive returned units.
+  refund_amount_paise | 64-bit integer | Approved merchandise refund; shipping is excluded.
+  reason | Text enum | DAMAGED, WRONG_SIZE or CHANGED_MIND.
+  return_status | Text enum | APPROVED in this source version. Do not assume future statuses are automatically approved.
+
+INVENTORY
+One snapshot per snapshot_date, store_id and product_id. Coverage: June 1-30, stores S001-S004, products P00001-P00500.
+  snapshot_date | Date | Calendar date of the stock snapshot.
+  store_id, product_id | Text | Composite key components and dimension references.
+  on_hand_quantity | Integer | Available units, including valid zeros.
+  reorder_level | Integer | Threshold used for low-stock reporting.
+
+WEB_EVENTS
+One event per event_id before exact replays; malformed physical lines have no usable event key. JSON Lines format.
+  event_id | Text | Event business key. Preserve source record identity for corrupt lines.
+  session_id | Text | Source session key; some abandoned sessions have no customer.
+  customer_id | Text or null | Optional logged-in customer ID.
+  event_type | Text enum | view_product, add_to_cart, checkout or purchase.
+  event_ts, received_ts | UTC timestamp | When the activity happened and when this export received it.
+  order_id | Text or null | Present for purchase events only; non-purchase events are not order lines.
+  product_id | Text | Viewed/primary product; not a full purchased-cart measure.
+  device | Object | type: mobile/desktop/tablet; os: Android/Linux/iOS.
+  marketing | Object | source: organic/email/paid_search; campaign: text or null.
+  cart | Array of objects | Each element has product_id (text) and quantity (integer); can be empty.
+  schema_version | Integer | 1 in baseline/early batches; 2 from July 4 batches.
+  app_version | Optional text | Added in version 2; absent in version 1, not a parsing failure.
+
+CUSTOMER_CDC
+One source change event per change_id before exact replays. These are synthetic file-based change events, not captured database logs.
+  change_id | Text | Unique change identity; use to recognize replay.
+  customer_id | Text | Customer whose state changes.
+  operation | Text enum | I = insert, U = update, D = soft delete.
+  effective_ts | UTC timestamp | When the new business state becomes valid.
+  source_sequence | 64-bit integer | Ordering/tie-breaker from the source. Equal timestamp and sequence with different payload is a conflict.
+  received_ts | UTC timestamp | When the change arrived. Arrival order can differ from effective order.
+  before | Customer object or null | Context only; not guaranteed to be the immediately prior image.
+  after | Customer object or null | Full authoritative image for I/U, null for D. Contains customer fields from the customer dictionary.
+

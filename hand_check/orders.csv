@@ -1,0 +1,3 @@
+order_id,customer_id,status,shipping_fee_paise,order_total_paise
+H1,HC1,DELIVERED,5000,33000
+H2,HC2,CANCELLED,0,10000

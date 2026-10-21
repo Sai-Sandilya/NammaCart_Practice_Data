@@ -1,0 +1,1 @@
+{"event_id":"W2","session_id":"WSESSION","customer_id":"C000001","event_type":"view_product","event_ts":"2025-07-08T12:30:00Z","received_ts":"2025-07-08T12:31:00Z","order_id":null,"product_id":"P00001","device":{"type":"mobile","os":"Android"},"marketing":{"source":"organic","campaign":null},"cart":[],"schema_version":1}

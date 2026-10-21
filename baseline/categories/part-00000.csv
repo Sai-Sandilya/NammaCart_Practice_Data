@@ -1,0 +1,13 @@
+category_id,category_name,parent_category_id
+CAT01,Home,
+CAT02,Electronics,
+CAT03,Fashion,
+CAT04,Grocery,
+CAT11,Kitchen,CAT01
+CAT12,Furniture,CAT01
+CAT21,Phones,CAT02
+CAT22,Accessories,CAT02
+CAT31,Clothing,CAT03
+CAT32,Footwear,CAT03
+CAT41,Pantry,CAT04
+CAT42,Snacks,CAT04

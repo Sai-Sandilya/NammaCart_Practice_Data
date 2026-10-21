@@ -1,0 +1,4 @@
+order_item_id,order_id,quantity,unit_price_paise,discount_paise
+HL1,H1,2,10000,2000
+HL2,H1,1,10000,0
+HL3,H2,1,10000,0
