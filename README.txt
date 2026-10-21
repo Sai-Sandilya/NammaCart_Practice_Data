@@ -68,3 +68,5 @@ No data file for a table can mean zero activity if the manifest expects none. A 
 
 HAND-CHECK EXPECTATIONS
 H1 merchandise 28,000 paise; approved return 9,000; net merchandise 19,000; net cash 24,000; shipping 5,000. H2 is cancelled and excluded. These are acceptance values, not query solutions.
+
+
